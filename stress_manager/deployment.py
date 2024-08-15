@@ -22,14 +22,14 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ]
 
-STORAGES = {
-    "default":{
-        "BACKEND" : "django.core.files.storage.FileSystemStorage"
-    },
-    # "staticfiles": {
-    #     "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
-    # },
-}
+# STORAGES = {
+#     "default":{
+#         "BACKEND" : "django.core.files.storage.FileSystemStorage"
+#     },
+#     "staticfiles": {
+#         "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+#     },
+# }
 
 CONNECTION = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
 CONNECTION_STR = { pair.split('=')[0]:pair.split('=')[1] for pair in CONNECTION.split(' ')}
