@@ -40,3 +40,8 @@ class UserDetailView(APIView):
         print(user)
         serializer = CustomUserSerializer(user)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+class HelloView(APIView):
+    permission_classes = [AllowAny]
+    def get(self, request):
+        return Response({"message": "hello all, cors deployment"}, status=status.HTTP_200_OK)

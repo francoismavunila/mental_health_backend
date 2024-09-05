@@ -10,7 +10,6 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
-settings_module = "stress_manager.deployment" if 'WEBSITE_HOSTNAME' in os.environ else "stress_manager.settings"
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", settings_module)
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "stress_manager.settings")
 
 application = get_wsgi_application()
